@@ -55,7 +55,7 @@ PRODUCT_PACKAGES_DEBUG += BTTestApp
 endif #TARGET_HAS_LOW_RAM
 
 else
-PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
+PRODUCT_SOONG_NAMESPACES += packages/modules/Bluetooth/android/app
 PRODUCT_PACKAGE_OVERLAYS += vendor/qcom/opensource/commonsys-intf/bluetooth/overlay/generic
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/generic/config
 endif #TARGET_USE_QTI_BT_STACK
