@@ -12,8 +12,6 @@ endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 
 #BT
 ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
-PRODUCT_PACKAGES += Bluetooth
-
 ifneq ($(TARGET_BOARD_TYPE),auto)
 # Set supported Bluetooth profiles to enabled
 PRODUCT_VENDOR_PROPERTIES += \
@@ -40,6 +38,8 @@ TARGET_USE_QTI_BT_STACK ?= true
 endif
 
 ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_PACKAGES += Bluetooth
+
 # BT Related Libs
 PRODUCT_PACKAGES += libbluetooth_qti
 PRODUCT_PACKAGES += libbluetooth_qti_jni
